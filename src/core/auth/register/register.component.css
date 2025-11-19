@@ -1,0 +1,54 @@
+h4{
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color:#575756;
+}
+
+.desc::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" fill="%23e36f62"><polygon points="15 0 0 9.8 15 20 30 9.8 "/></svg>') ;
+    background-size: contain;
+    background-repeat: repeat;
+    width: 50%;
+    height: 20px;
+}
+
+
+
+::ng-deep  .p-inputtext {
+    padding-inline: 0 !important;
+    border-radius: 0 !important;
+    border-color: #000 !important;
+    width: 100% !important;
+    padding-inline-start: 10px !important;
+    padding-block: 15px !important;
+}
+
+::ng-deep  .p-inputtext::placeholder{
+    font-weight: 600;
+    font-size: 20px;
+    color: #AFAFAF;
+}
+
+
+
+::ng-deep .p-checkbox-box {
+    border-radius: 0 !important;
+    padding: 13px !important;
+
+}
+
+::ng-deep .p-checkbox-box:checked{
+    color: transparent !important;
+}
+
+
+
+::ng-deep .p-autocomplete-loader{
+    display: none !important;
+}

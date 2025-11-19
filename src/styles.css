@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss';
+@import 'tailwindcss-primeui';
+@import 'primeicons/primeicons.css';
+
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Barlow Semi Condensed', sans-serif !important;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Balsamiq Sans', sans-serif;
+  font-weight: 900;
+}
+
+@layer components {
+  .zomato-acnchor {
+    @apply relative pb-2 text-4xl font-bold cursor-pointer after:bg-white after:size-1 after:absolute after:bottom-5 after:-right-2;
+  }
+
+   .after-span {
+    @apply  md:relative
+       md:text-[18px]
+       md:px-4
+       md:after:bg-white  
+       md:after:absolute  
+       md:after:-top-[5%] 
+       md:after:start-[95%] 
+       md:after:w-0.5 
+       md:after:h-5  
+       md:cursor-pointer 
+       md:hover:text-[#FBCC79];
+  }
+
+  .media {
+    @apply rounded-full border  size-[35px] flex hover:border-[#FBCC79] cursor-pointer hover:text-[#FBCC79]  transition-all duration-100;
+  }
+
+  .img-style {
+    @apply relative
+     w-full 
+    md:col-span-4 rotate-5
+     md:col-start-8 
+     z-20 
+     after:absolute 
+     after:-top-[5%] 
+     after:end-1/2 
+     after:start-1/2 
+     after:-translate-x-1/2
+      after:bg-white
+       md:after:w-[120%]
+       after:w-full
+        after:h-[125%] 
+        after:-z-10;
+  }
+
+  .desc-img {
+    @apply font-bold text-[22px]  leading-[31px]  text-[#575756] pt-10;
+  }
+  .h3-style {
+    @apply py-10 capitalize w-fit relative text-[60px] md:text-[73px] leading-[85px]  font-bold;
+  }
+
+  .center {
+    @apply absolute -translate-x-1/2 -translate-y-1/2 top-1/2 start-1/2;
+  }
+
+  .bold-txt {
+    @apply uppercase text-[75px] font-bold leading-[75px] text-white;
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+}
+
+@theme {
+  --color-main-color: rgb(250, 206, 141);
+}
+
+.p-button-label {
+  font-weight: 700 !important;
+  font-size: 1.125rem !important;
+}
+
+@utility container {
+  width: 85%;
+  margin-inline: auto;
+}

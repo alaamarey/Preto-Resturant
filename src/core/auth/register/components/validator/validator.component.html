@@ -1,0 +1,26 @@
+
+@if(control()?.errors  && control()?.touched){ 
+          <div class="md:w-full bg-white text-red-600 text-center mt-2 p-2 w-[80%]  mx-auto">
+            @if(control()?.hasError('required')){
+              <p class="font-semibold text-lg">This field Can't be blank . </p>
+            }
+            @if(control()?.hasError('minlength')){
+              <p class="font-semibold text-lg">The length of userName must be 2 or more  </p>
+            }
+            @if(control()?.hasError('maxlength')){
+              <p class="font-semibold text-lg">The length of userName must be 20 or less  </p>
+            }
+            @if(control()?.hasError('email')){
+                <p class="font-semibold text-lg">This field must match email form.</p>
+            }
+            @if(control()?.hasError('pattern')){
+                <p class="font-semibold text-lg">Password ≥8 characters, at least one letter and one digi.</p>
+            }
+            @if(control()?.hasError('isValidPhoneNumber')){
+                <p class="font-semibold text-lg">Your number is invalid.</p>
+            }
+            @if(control()?.hasError('min')){
+                <p class="font-semibold text-lg  ">Your Amount must be greater than 0. </p>
+            }
+          </div>
+         }

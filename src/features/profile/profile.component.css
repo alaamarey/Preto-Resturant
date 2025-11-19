@@ -1,0 +1,26 @@
+section#user {
+  background-color: #ABACD3;
+  position: relative;
+  height:auto;
+  /* clip-paths: polygon(0 0,100%  0,100%  90%,  0 50% ) */
+  
+}
+
+
+
+
+section#user::after {
+  content: '';
+  background-image: url('https://www.preto.co.uk/app/themes/preto/dist/images/wave.svg');
+  width: 100%;
+  background-size: 130px;
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.09;
+}
+
+

@@ -1,0 +1,11 @@
+h2::after {
+  content: '';
+  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" fill="%23e36f62"><polygon points="15 0 0 9.8 15 20 30 9.8 "/></svg>');
+  width: 41.6%;
+  background-size: contain;
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform:  translateX(-50%);
+}

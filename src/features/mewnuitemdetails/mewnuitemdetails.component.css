@@ -1,0 +1,129 @@
+/* h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAyMCIgZmlsbD0iI2VmYzQ2YiI+PHBvbHlnb24gcG9pbnRzPSIxNSAwIDAgOS44IDE1IDIwIDMwIDkuOCAiLz48L3N2Zz4=');
+  background-size: contain;
+  width: 70%;
+  height: 20px;
+} */
+
+h3::after {
+  content: '';
+  background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTAwIiB3aWR0aD0iMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIzNSIgZmlsbD0iI2FiYTRjMiIgLz48L3N2Zz4=');
+  background-size: contain;
+  position: absolute;
+  top: -35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 20px;
+}
+
+h3::before {
+  content: '';
+  background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTAwIiB3aWR0aD0iMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIzNSIgZmlsbD0iI2FiYTRjMiIgLz48L3N2Zz4=');
+  background-size: contain;
+  position: absolute;
+  bottom: -35%;
+  left:50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 20px;
+}
+::ng-deep .p-card-title {
+  color: #e36f62 !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  font-weight: 900;
+  position: relative !important;
+  width: fit-content !important;
+}
+
+::ng-deep .p-card-title::after {
+  content: '';
+  background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU1IDQ2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1NS40IDQ2Ljc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjZWZjNDZiIiBkPSJNNTUuNCwyOWMtMS4xLDAuNS0yLjIsMC44LTMuNSwwLjhoLTAuMmMtNC4zLDAtNy4zLTMtOS40LTYuNGMtMy4zLTUuMi01LjItMTEuMi04LjQtMTYuNWMtMS40LTIuMy0zLjEtNC42LTUuNi01LjljLTIuMi0xLjItNS0xLjQtNy40LTAuNWMtMi40LDAuOS00LjMsMi45LTUuNyw1Yy0xLjcsMi41LTMuMSw1LjMtNC40LDguMWMtMS4zLDIuOC0yLjYsNS43LTQuMiw4LjQgYy0xLjQsMi4zLTMsNC43LTUuMyw2LjJDMSwyOC42LDAuNSwyOC44LDAsMjkuMXYxNy43YzEuMywwLjEsMi41LTAuMSwzLjctMC42YzIuNC0wLjksNC4zLTIuOSw1LjctNWMxLjctMi41LDMuMS01LjMsNC40LTguMWMxLjMtMi44LDIuNi01LjcsNC4yLTguNGMxLjQtMi4zLDMtNC43LDUuMy02LjJjMi4xLTEuNCw0LjgtMS45LDcuMy0xLjJjMi41LDAuNyw0LjQsMi41LDYsNC41YzAuNCwwLjUsMC44LDEuMSwxLjEsMS42YzIuMywzLjcsMy45LDcuNyw1LjgsMTEuNmMxLjcsMy41LDMuNyw3LjQsNi45LDkuOWMxLjUsMS4yLDMuMywxLjgsNS4yLDEuOVYyOXoiLz48L3N2Zz4=');
+  background-size: contain;
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 11px;
+}
+
+::ng-deep .p-card-body {
+  align-items: center;
+  justify-content: center;
+}
+
+::ng-deep .p-card-body .p-card-content {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+::ng-deep .order-btn p-button .p-ripple .p-button-label {
+  position: relative;
+}
+::ng-deep .order-btn p-button .p-ripple .p-button-label::after {
+  content: '';
+background-image: url('../../../public/assets/book-now-spacer.webp');
+  background-size: contain;
+  position: absolute;
+  top: -8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 53%;
+  height: 7px;
+}
+::ng-deep .order-btn p-button .p-ripple .p-button-label::before {
+  content: '';
+background-image: url('/assets/book-now-spacer.webp');
+  background-size: contain;
+  position: absolute;
+  bottom: -8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 53%;
+  height: 7px;
+}
+
+
+/* ::ng-deep .p-dialog {
+  border-radius: 0 !important;
+
+}
+::ng-deep  .p-dialog-mask{
+  background-image: url('/assets/slider2.4.webp') !important;
+  background-position:center center  !important;
+  background-size:cover  !important;
+}
+
+
+::ng-deep .p-dialog-header {
+  background-color: #E6EAED !important;
+  text-transform: uppercase;
+} */
+
+
+/* ::ng-deep .p-inputnumber-vertical{
+  flex-direction: row !important;
+  border-radius: 0 !important;
+}
+
+::ng-deep .p-inputnumber-vertical .p-inputnumber-increment-button {
+  border-radius: 0 !important;
+}
+
+::ng-deep .p-inputnumber-vertical .p-inputnumber-decrement-button {
+  border-radius: 0 !important;
+}
+ */

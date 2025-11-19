@@ -1,0 +1,22 @@
+<section class="pt-10 md:pt-20 pb-40">
+  <p-breadcrumb 
+  [model]="breadCrumbItems()" 
+  styleClass="breadcrumb !pb-25" 
+  pAnimateOnScroll
+  enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+  >
+    <ng-template pTemplate="item" let-item>
+      <h2
+        class="relative cursor-pointer text-[22px] md:text-[40px] text-[#575756] leading-[46px]   "
+        [routerLink]="item.categroyName"
+        routerLinkActive="!text-[#07B5C1]  after:bg-[#07B5C1]  after:w-full after:h-[8px] after:absolute after:-bottom-2 after:start-0 "
+      >
+        {{ item.categroyName }}
+      </h2>
+    </ng-template>
+  </p-breadcrumb>
+  <router-outlet></router-outlet>
+  <app-sides></app-sides>
+  <app-kids></app-kids>
+<app-desert></app-desert>
+</section>

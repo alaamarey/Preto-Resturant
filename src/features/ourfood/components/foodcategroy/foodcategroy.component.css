@@ -1,0 +1,20 @@
+::ng-deep .p-breadcrumb {
+    background-color: transparent !important;
+}
+
+
+
+::ng-deep .p-icon {
+    display: none !important;
+    text-align: center !important;
+}
+
+
+::ng-deep .p-breadcrumb-list {
+    gap:16px !important;
+    justify-content: center;
+    align-items: center;
+
+}
+
+

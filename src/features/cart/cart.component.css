@@ -1,0 +1,57 @@
+
+header {
+    background-image: url('/assets/slider2.4.webp');
+    height:65vh;
+    background-size: cover;
+    background-position: center center;
+    width:100%;
+    background-repeat: no-repeat;
+}
+
+
+
+::ng-deep .p-inputnumber-vertical{
+  flex-direction: row !important;
+  border-radius: 0 !important;
+}
+
+::ng-deep .p-inputnumber-vertical .p-inputnumber-increment-button {
+  border-radius: 0 !important;
+}
+
+::ng-deep .p-inputnumber-vertical .p-inputnumber-decrement-button {
+  border-radius: 0 !important;
+}
+
+
+
+::ng-deep .p-dialog {
+  border-radius: 0 !important;
+
+}
+::ng-deep  .p-dialog-mask{
+  background-image: url('/assets/slider2.4.webp') !important;
+  background-position:center center  !important;
+  background-size:cover  !important;
+}
+
+
+::ng-deep .p-dialog-header {
+  background-color: #E6EAED !important;
+  text-transform: uppercase;
+}
+
+
+::ng-deep .p-inputnumber-vertical{
+  flex-direction: row !important;
+  border-radius: 0 !important;
+}
+
+::ng-deep .p-inputnumber-vertical .p-inputnumber-increment-button {
+  border-radius: 0 !important;
+}
+
+::ng-deep .p-inputnumber-vertical .p-inputnumber-decrement-button {
+  border-radius: 0 !important;
+}
+

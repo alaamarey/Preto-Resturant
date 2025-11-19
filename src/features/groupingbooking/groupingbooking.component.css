@@ -1,0 +1,147 @@
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2)), url('/assets/slider2.4.webp');
+  height: 65vh;
+  background-size: cover;
+  background-position: top center;
+  width: 100%;
+}
+
+h2::after {
+  content: '';
+  background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAyMCIgZmlsbD0iI2VmYzQ2YiI+PHBvbHlnb24gcG9pbnRzPSIxNSAwIDAgOS44IDE1IDIwIDMwIDkuOCAiLz48L3N2Zz4=');
+  background-size: 20px;
+  width: 31%;
+  height: 13px;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section#get-in-touch {
+  background-color: #16b9c5;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+section#get-in-touch::after {
+  content: '';
+  background-image: url('https://www.preto.co.uk/app/themes/preto/dist/images/wave.svg');
+  background-repeat: repeat;
+  background-position: top center;
+  background-size: 200px;
+  width: 100%;
+  position: absolute;
+  top: -15%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.09;
+}
+
+h3#touch::after {
+  content: '';
+  background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAyMCIgZmlsbD0iI2VmYzQ2YiI+PHBvbHlnb24gcG9pbnRzPSIxNSAwIDAgOS44IDE1IDIwIDMwIDkuOCAiLz48L3N2Zz4=');
+  width: 74%;
+  height: 13px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+::ng-deep .input .p-inputtext ,textarea {
+  border-radius: 0 !important;
+  border: none !important ;
+  padding-block: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #575F66;
+
+}
+
+input::placeholder  , textarea::placeholder {
+  font-size: 22px;
+  line-height: 52px;
+  font-weight: 600;
+  color: #acacac;
+  text-transform: uppercase;
+}
+
+::ng-deep p-datepicker input {
+  width: 100% !important;
+}
+
+::ng-deep p-datepicker input::placeholder {
+  font-size: 22px !important;
+  line-height: 52px !important;
+  font-weight: 600 !important;
+  color: #acacac !important;
+  text-transform: uppercase !important;
+}
+
+::ng-deep p-inputnumber input::placeholder {
+  font-size: 22px;
+  line-height: 52px;
+  font-weight: 600;
+  color: #acacac !important;
+  text-transform: uppercase;
+}
+
+
+
+::ng-deep p-treeselect {
+  border-radius: 0 !important;
+  border: none !important;
+  width: 100% !important;
+}
+
+::ng-deep p-treeselect .p-treeselect-label-container .p-placeholder.p-treeselect-label {
+  font-size: 22px !important;
+  line-height: 52px !important;
+  font-weight: 600 !important;
+  color: #575F66 !important;
+  text-transform: uppercase !important;
+}
+
+
+::ng-deep .p-treeselect-overlay {
+  border-radius: 0px !important;
+
+}
+
+::ng-deep .p-icon {
+  color: #575F66 !important;
+
+}
+
+
+::ng-deep .p-tree {
+  display: inline !important;
+
+}
+::ng-deep .p-tree-node-selectable , ::ng-deep .p-treeselect-label {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color : #575F66 !important
+
+}
+
+
+::ng-deep .p-tree-node-content.p-tree-node-selected  {
+  background-color: transparent !important;
+}
+/* ::ng-deep .p-toast-message-content {
+  background-color: #16B9C5  !important;
+  font-size: 25px !important;
+  font-weight: 900 !important;
+} */
+
+
+::ng-deep   .p-toast-message-success .p-toast-detail{
+  font-size: 19px ;
+  font-weight: 600;
+}
+:focus-visible {
+  outline: none;
+}

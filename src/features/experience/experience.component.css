@@ -1,0 +1,56 @@
+header {
+  position: relative;
+  background-color: #afbc72;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+header::after {
+  content: '';
+  background-image: url('https://www.preto.co.uk/app/themes/preto/dist/images/wave.svg');
+  position: absolute;
+  top: -15%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-position: top center;
+  background-size: 200px;
+  background-repeat: repeat;
+  width: 100%;
+  opacity: 0.09;
+}
+
+h1::after {
+  content: '';
+  background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAyMCIgZmlsbD0iI2VmYzQ2YiI+PHBvbHlnb24gcG9pbnRzPSIxNSAwIDAgOS44IDE1IDIwIDMwIDkuOCAiLz48L3N2Zz4=');
+  /* background-repeat: repeat; */
+  background-size: 30px;
+  height: 20px;
+  width: 99%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+h2::after {
+  content: '';
+  background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAyMCIgZmlsbD0iI2FmYmM3MiI+PHBvbHlnb24gcG9pbnRzPSIxNSAwIDAgOS44IDE1IDIwIDMwIDkuOCAiLz48L3N2Zz4=');
+  background-size: 30px;
+  height: 20px;
+  width: 99%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+::ng-deep .p-button-text.p-button-secondary{
+background-color:  transparent !important;
+}
+
+
+::ng-deep .p-icon  {
+color: #EFC46B  ;
+
+}

@@ -1,0 +1,51 @@
+<section>
+  <div class="container md:grid md:grid-cols-12 md:items-center">
+    <figure class="md:col-span-5 w-full cursor-pointer">
+      <img
+        appImg
+        [src]="oneFood().photoUrl"
+        [alt]="oneFood().categoryName"
+        class="w-full"
+        [routerLink]="routerLink()"
+      />
+    </figure>
+
+
+
+
+
+
+
+    <div class="hidden  md:col-span-6 md:col-start-7  md:block">
+      <div class="grid grid-cols-12 space-y-10 gap-x-3.5 items-center">
+        @for ( item of foodItems().slice( sliceFrom() ,sliceEnd() ) ; track item.itemID ) {
+
+        <figure class="col-span-5">
+          <img appImg [src]="item.photoUrl" [alt]="item.menuItemName" />
+        </figure>
+
+        <figcaption class="col-span-7">
+          <h3 class="font-semibold text-[27px] text-[#07B5C1]">{{ item.menuItemName }}</h3>
+          <p class="text-sm text-[#575756]">{{ item.description }}</p>
+          <p>
+            <span class="font-black uppercase"> price: </span>
+            {{ item.price | currency : 'GBP' }}
+          </p>
+
+          @if(item.availability === true){
+          <p>
+            <span class="font-black uppercase text-green-600"> availability: </span>
+            {{ item.availability }}
+          </p>
+          }@else{
+          <p>
+            <span class="font-black uppercase text-red-600"> availability: </span>
+            {{ item.availability }}
+          </p>
+          }
+        </figcaption>
+        }
+      </div>
+    </div>
+  </div>
+</section>

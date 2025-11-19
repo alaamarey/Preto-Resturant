@@ -1,0 +1,146 @@
+<main class="pt-40">
+  <section id="user" class="pt-10">
+    <div class="md:grid md:grid-cols-12 md:items-center">
+
+
+      <div class="md:col-span-4 flex flex-col justify-center items-center  ">
+
+        <div class="flex flex-col items-center w-full   ">
+          <figure
+            class="bg-[#EFC46B] size-60 border-8 border-[#61C9F4] flex justify-start items-center relative z-20 rounded-full"
+          >
+            <img src="/assets/personal.webp" alt="personalImage" class="w-[80%]" />
+          </figure>
+
+
+
+          <div class="p-8">
+            <p-card
+              [style]="{ width: '25rem', overflow: 'hidden', 'border-radius': '0' }"
+              styleClass=" relative! -top-15!  border-8! border-[#61C9F4]!"
+            >
+              <ng-template #subtitle>
+                <small class="font-black text-[40px] mx-auto block w-fit">
+                  <span class="uppercase text-sm text-[#9b8e18a8]">your name: </span>
+                  {{ userData().userName }}
+                </small>
+              </ng-template>
+
+              <ul class="flex flex-col justify-center relative z-[80] items-center">
+                <li
+                  class="flex justify-start gap-x-3 items-center shadow px-2 mb-3 py-3 pb-1 w-[60%] pointer-events-auto transform cursor-pointer hover:scale-[1.2] transition-all duration-300"
+                >
+                  <i class="pi pi-envelope text-[#EFC46B]"></i>
+                  <span class="text-[#EFC46B] font-bold">{{ userData().emailId }}</span>
+                </li>
+
+                <li
+                  class="flex justify-start gap-x-3 items-center shadow px-2 mb-3 py-3 pb-1 w-[60%] cursor-pointer hover:scale-[1.2] transition-all duration-300"
+                >
+                  <i class="pi pi-phone text-[#E36F62]"></i>
+                  <span class="text-[#E36F62] font-bold">{{ userData().mobileNo }}</span>
+                </li>
+
+                <li
+                  class="flex justify-start gap-x-3 items-center shadow px-2 mb-3 py-3 pb-1 w-[60%] cursor-pointer hover:scale-[1.2] transition-all duration-300"
+                >
+                  <i class="pi pi-eye-slash text-[#AFBC72]"></i>
+                  <span class="text-[#AFBC72] font-bold">{{ userData().password }}</span>
+                </li>
+
+                <li
+                  class="flex justify-start gap-x-3 items-center shadow px-2 mb-3 py-3 pb-1 w-[60%] cursor-pointer hover:scale-[1.2] transition-all duration-300"
+                >
+                  <i class="pi pi-envelope text-[#ABA4C2]"></i>
+                  <span class="text-[#ABA4C2] font-bold">{{ userData().role }}</span>
+                </li>
+                
+          <app-button  labelName="Sign out"  bgColor="bg-[#EFC46B]!"  classes="relative!  z-20! "  
+          (click)="signOut()"
+          ></app-button>
+              </ul>
+
+
+            </p-card>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+      <div class="col-span-7">
+        <section class="relative w-full z-20">
+          <h2 class="md:text-[90px] text-[70px] text-center md:text-start font-black pb-3 uppercase leading-20 text-[#E36F62]">
+            Your <br />
+            Orders
+          </h2>
+          @if(userDataOrder().length) {
+
+          <div class="grid grid-cols-12">
+            <div class="col-span-12">
+              <div class="card flex">
+                <p-accordion value="0" class="w-full!">
+                  @for (order of userDataOrder() ; track order.orderId) {
+
+                  <p-accordion-panel [value]="$index" class="bg-red-400!">
+                    <p-accordion-header class="rounded-none!">
+                      <div class="flex items-center gap-x-3">
+                        <span class="uppercase font-bold text-[#E36F62]">Order id:</span>
+                        <span class="text-[30px] font-black"> {{ order.orderId }}</span>
+                      </div>
+                    </p-accordion-header>
+
+                    <p-accordion-content>
+                      <p class="flex items-center gap-x-2">
+                        <i class="pi pi-calendar-times"></i>
+                        <span>
+                          <small class="uppercase font-bold">
+                            you make your order in the date :</small
+                          >
+
+                          <small class="text-[25px] font-semibold text-[#EFC46B]">
+                            {{ order.orderDate | date : 'medium' }}
+                          </small>
+                        </span>
+                      </p>
+
+                      <p class="flex items-center gap-x-2">
+                        <i class="pi pi-objects-column"></i>
+                        <span>
+                          <small class="uppercase font-bold"
+                            >your totalamount of this order is:
+                          </small>
+                          <small class="text-[25px] font-semibold text-[#B4BF76]">
+                            {{ order.totalAmount }}
+                          </small>
+                          <small class="font-medium"> amount</small>
+                        </span>
+                      </p>
+                    </p-accordion-content>
+                  </p-accordion-panel>
+
+                  } @empty {
+                  <p class="font-bold text-[25px] text-red-950">
+                    <i class="pi pi-sitemap text-red-950 font-bold! text-[22px]!"></i>
+                    There is No Orders yet .
+                  </p>
+                  }
+                </p-accordion>
+              </div>
+            </div>
+          </div>
+          }
+        </section>
+      </div>
+    </div>
+
+  </section>
+</main>

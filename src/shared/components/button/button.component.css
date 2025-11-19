@@ -1,0 +1,7 @@
+::ng-deep .zomato-btn .p-button-label {
+  font-size: 27px !important;
+  font-weight: 800 !important;
+  padding-block: 1px !important;
+  padding-inline: 10px !important;
+  text-transform: uppercase ;
+}

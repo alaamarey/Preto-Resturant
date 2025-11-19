@@ -1,0 +1,6 @@
+/* @layer components {
+
+    .valid-text {
+        @apply   font-semibold text-lg ;
+    }
+} */

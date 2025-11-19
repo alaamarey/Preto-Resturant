@@ -1,0 +1,139 @@
+<section class="bg-[#FBCD72] py-20">
+  <div class="md:container">
+
+
+
+    <div class="text-center">
+      <h4 class="uppercase">Don't miss out</h4>
+
+      <p class="desc font-semibold text-[20px]  md:text-[22px] text-[#575756] pt-5 pb-12 relative">
+        Sign up here for all the latest offers and birthday treats!
+      </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <form
+      class="flex flex-col items-center justify-center"
+      [formGroup]="registerForm"
+      (ngSubmit)="registerFormFn($event)"
+    >
+      @let userName = registerForm.get('userName') ;
+      <div class="flex flex-col w-[90%] mx-auto   md:w-[75%] mb-8">
+        <label for="username" class="font-bold py-2">First name *</label>
+        <p-autocomplete
+          inputId="username"
+          placeholder="First Name"
+          formControlName="userName"
+          class="text-[20px]!"
+        />
+        <app-validator [control]="userName!"></app-validator>
+      </div>
+
+      @let password = registerForm.get('password');
+      <div class="flex flex-col  w-[90%] mx-auto   md:w-[75%] mb-8">
+        <label for="password" class="font-bold py-2">Password*</label>
+        <p-password inputId="password" [feedback]="false" formControlName="password" />
+        <app-validator [control]="password!"></app-validator>
+      </div>
+
+
+
+
+
+
+
+
+      @let mobileNo = registerForm.get('mobileNo');
+      <div class="flex flex-col  w-[90%] mx-auto   md:w-[75%] mb-8">
+        <label for="withoutgrouping" class="font-bold py-2">Phone*</label>
+        <p-inputnumber
+          mode="decimal"
+          inputId="withoutgrouping"
+          [useGrouping]="false"
+          formControlName="mobileNo"
+        />
+        <app-validator [control]="mobileNo!"></app-validator>
+      </div>
+
+
+
+
+
+
+
+
+      @let emailId = registerForm.get('emailId');
+      <div class="flex flex-col  w-[90%] mx-auto   md:w-[75%] mb-8">
+        <label for="email" class="font-bold py-2">Email addreaa*</label>
+        <p-autocomplete
+          inputId="email"
+          placeholder="e.g.johnsmith@hotmail.com"
+          formControlName="emailId"
+        />
+        <app-validator [control]="emailId!"></app-validator>
+      </div>
+
+
+
+
+
+
+
+      <div class=" w-[90%] mx-auto   md:w-[75%] mb-8 bg-white border flex gap-x-10 px-10 items-center py-3">
+        <p-checkbox [binary]="true" />
+        <p class="font-bold text-[#505360]">
+          Tick here to allow us to send you emails with great offers, a treat on your Birthday and
+          information about what's <br />
+          going on at our venues.
+        </p>
+      </div>
+
+
+
+
+
+
+      @if(message() === 'User Name Already Exist'){
+      <div class="w-[75%] mb-5 bg-[#F8D7DA] text-[#842029] px-5 py-3">
+        <p>{{ message() }}</p>
+      </div>
+      }@else if( message() === 'Data Added Success') {
+      <div
+        class="w-[75%] mb-5 bg-[#d7f8d9] text-[#5d9447] px-5 py-3 flex items-center gap-x-2 justify-start"
+      >
+        <p>{{ message() }}</p>
+        <small class="text-sm text-black font-semibold"> now u can enjoy</small>
+      </div>
+      } @if(isCallApi() === false){
+
+      <p-button
+        label="Submit"
+        type="submit"
+        styleClass="!font-light !bg-[#505360]  !border-none !rounded-none !px-10  !py-3 !uppercase 
+                    hover:bg-white!
+        "
+      ></p-button>
+      }@else{
+
+      <div class="card flex justify-center">
+        <p-progress-spinner
+          strokeWidth="8"
+          fill="transparent"
+          animationDuration=".5s"
+          [style]="{ width: '50px', height: '50px' }"
+        />
+      </div>
+
+      }
+    </form>
+  </div>
+</section>
