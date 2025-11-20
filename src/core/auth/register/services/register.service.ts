@@ -19,14 +19,14 @@ export class RegisterService {
     
   }
 
-  // private readonly API_URL = inject(API_URL);
+  private readonly API_URL = inject(API_URL);
   private readonly httpClient = inject(HttpClient);
 
 
 
 
   signUp(body: object): Observable<Register>{
-    return this.httpClient.post<Register>(environment.apiUrl + 'AddNewUser', body);
+    return this.httpClient.post<Register>(this.API_URL + 'AddNewUser', body);
   }
 
 
