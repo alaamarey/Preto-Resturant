@@ -47,6 +47,8 @@
 
 
 
+
+
 .menu-items::after {
   content: '';
  background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAyMCIgZmlsbD0iIzlBOUE5QSI+PHBvbHlnb24gcG9pbnRzPSIxNSAwIDAgOS44IDE1IDIwIDMwIDkuOCAiLz48L3N2Zz4=');
@@ -59,3 +61,20 @@
   left:0;
 }
 
+
+
+::ng-deep  .p-drawer-top {
+  height: auto !important;
+/* background-color: rgba(255, 0, 0, 0.966) !important; */
+z-index: 100;
+}
+
+
+::ng-deep .p-drawer {
+  border: none !important;
+}
+
+
+::ng-deep .p-drawer-top .p-drawer-content {
+  text-align: center;
+}

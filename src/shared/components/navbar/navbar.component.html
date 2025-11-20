@@ -144,7 +144,6 @@
 </section>
 
 
-
 <p-toolbar
   class="mt-[60px]! md:hidden! rounded-none! border-transparent! flex   py-4 px-4 fixed top-0 start-0 end-0 z-100 bg-white "
 >
@@ -180,15 +179,22 @@
 
 <p-drawer [(visible)]="showMobileMenu" >
     <ul class="space-y-10 p-4 text-lg font-semibold text-center">
-    <li routerLink="/ourfood" (click)="showMobileMenu = false"  class="text-[#AFBC72] uppercase w-full text-[25px] relative menu-items" >Our Food</li>
-    <li routerLink="/categroies" (click)="showMobileMenu = false" class="text-[#EFC46B] uppercase w-full text-[25px] relative menu-items">Categories</li>
-    <li routerLink="/cart" (click)="showMobileMenu = false" class="text-[#ABA4C2] uppercase ] w-full text-[25px] relative menu-items">Cart</li>
-    <li routerLink="/experience" (click)="showMobileMenu = false" class="text-[#E36F62] uppercase text-[25px] w-full  relative menu-items">The Experience</li>
-    <li routerLink="/group-booking" (click)="showMobileMenu = false"  class="text-[#EFC66F] uppercase  w-full text-[25px] relative menu-items">Group Booking</li>
-    <li routerLink="/profile" (click)="showMobileMenu = false" class="text-[#07B5C1] uppercase w-full text-[25px] relative menu-items">Your Profile</li>
+    <li routerLink="/ourfood" (click)="showMobileMenu = false"   class="text-[#AFBC72] uppercase cursor-pointer w-full text-[25px] relative menu-items" >Our Food</li>
+    <li routerLink="/categroies" (click)="showMobileMenu = false" class="text-[#EFC46B] uppercase cursor-pointer w-full text-[25px] relative menu-items">Categories</li>
+    <li routerLink="/cart" (click)="showMobileMenu = false" class="text-[#ABA4C2] uppercase ] cursor-pointer w-full text-[25px] relative menu-items">Cart</li>
+    <li routerLink="/experience" (click)="showMobileMenu = false" class="text-[#E36F62] uppercase cursor-pointer text-[25px] w-full  relative menu-items">The Experience</li>
+    <li routerLink="/group-booking" (click)="showMobileMenu = false"  class="text-[#EFC66F] uppercase cursor-pointer  w-full text-[25px] relative menu-items">Group Booking</li>
+    <li routerLink="/profile" (click)="showMobileMenu = false" class="text-[#07B5C1] uppercase w-full cursor-pointer text-[25px] relative menu-items">Your Profile</li>
   </ul>
-
 </p-drawer>
 
 
-<p-toast class="nav-toast" position="top-center" />
+<!-- <p-toast class="nav-toast" position="top-center" /> -->
+
+
+
+ <p-drawer   [(visible)]="visible3" position="top" styleClass="drawer!">
+        <p>
+           {{deatails()}}
+        </p>
+    </p-drawer>

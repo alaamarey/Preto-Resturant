@@ -25,8 +25,8 @@ export class NavbarComponent {
 
  cartitemLength = computed(  () => this.cartService.cartItems() ) ;
  showMobileMenu = false;
-
-
+ visible3  = false ;
+deatails = signal('');
 
 
   @HostListener('click' )
@@ -35,11 +35,18 @@ export class NavbarComponent {
   const toastData = localStorage.getItem('toastMessage');
     if (toastData) {
       const msg = JSON.parse(toastData);
-      this.messageService.add({
-        severity: msg.severity,
-        summary: msg.summary,
-        detail: msg.detail
-      });
+      // this.messageService.add({
+      //   severity: msg.severity,
+      //   summary: msg.summary,
+      //   detail: msg.detail
+      // });
+
+      this.deatails.set(msg.detail);
+    
+      this.visible3 = true ;
+
+
+    
       localStorage.removeItem('toastMessage'); // امسح الرسالة بعد عرضها
     }
   }
