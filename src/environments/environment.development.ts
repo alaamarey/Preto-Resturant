@@ -1,4 +1,3 @@
 export const environment = {
-    apiUrl: "/api/api/zomato/"
+  apiUrl: "/api/zomato/"
 };
-

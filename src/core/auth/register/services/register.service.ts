@@ -11,6 +11,14 @@ import { environment } from '../../../../environments/environment.development';
 export class RegisterService {
   
 
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    console.log(environment.apiUrl);
+    
+  }
+
   // private readonly API_URL = inject(API_URL);
   private readonly httpClient = inject(HttpClient);
 
