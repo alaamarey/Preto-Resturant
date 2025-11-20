@@ -1,3 +1,3 @@
 export const environment = {
-    apiUrl: "/zomato/"
+    apiUrl: "https://freeapi.gerasim.in/api/zomato/"
 };
