@@ -22,6 +22,11 @@ export class ProfileService {
   }
 
 
+  deleteuser() :Observable<any> {
+  return   this.httpClient.delete(this.API_URL + `DeleteUserByUserId?userId=535`) ;
+  }
+
+
   signOut(){
     localStorage.removeItem('userId') ;
     this.router.navigate(['zomato']);

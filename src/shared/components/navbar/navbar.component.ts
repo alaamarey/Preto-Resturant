@@ -8,6 +8,7 @@ import { ToastModule } from 'primeng/toast'
 import { MessageService } from 'primeng/api';
 import { CartService } from '../../services/cart.service';
 import { DrawerModule } from 'primeng/drawer';
+import { ProfileService } from '../../../features/profile/service/profile.service';
 
 
 
@@ -22,12 +23,28 @@ export class NavbarComponent {
 
   private messageService = inject(MessageService);
   private cartService = inject(CartService);
+  private profileService = inject(ProfileService);
 
  cartitemLength = computed(  () => this.cartService.cartItems() ) ;
  showMobileMenu = false;
  visible3  = false ;
 deatails = signal('');
 
+
+
+ngOnInit(): void {
+  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //Add 'implements OnInit' to the class.
+
+
+  this.profileService.deleteuser().subscribe({
+    next:(respose => {
+        console.log(respose);
+        
+    } )
+  }) 
+  
+}
 
   @HostListener('click' )
   onClick() {
