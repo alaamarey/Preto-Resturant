@@ -1,4 +1,4 @@
 
 export const environment = {
-  apiUrl: "https://freeapi.gerasim.in/api/zomato/"
+  apiUrl: "/api/proxy.ts/"
 };
