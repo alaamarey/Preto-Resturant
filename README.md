@@ -16,8 +16,6 @@ Built with the tools of modern technology
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 
 
-
-
 ---
 
 ## Table of Contents
@@ -102,17 +100,5 @@ http://localhost:4200/
 ```
 
 ---
+[🔝Return](#preto-restaurant)
 
-## Testing
-
-Run unit tests:
-
-```bash
-ng test
-```
-
-Run end‑to‑end tests:
-
-```bash
-ng e2e
-```
