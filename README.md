@@ -2,8 +2,17 @@
 
 Transforming Dining Into Memorable Experiences Daily
 
+
 <p align="left">
-  <img src="/mnt/data/Screenshot 2025-11-23 201141.jpg" alt="Tech Tools" width="600" />
+  ![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![RxJS](https://img.shields.io/badge/RxJS-B7178C?logo=reactivex&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=black)
+![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)
+
 </p>
 
 Built with the tools of modern technology
