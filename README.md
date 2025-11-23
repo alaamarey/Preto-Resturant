@@ -39,11 +39,15 @@ Preto-Restaurant is a comprehensive Angular framework tailored for building scal
 
 This project simplifies the creation of dynamic, responsive restaurant platforms. The core features include:
 
-*🔧🛠️ **Environment & Build Configuration**: Manage multiple environments with ease, ensuring efficient deployment and development flows.
-*🔑🔒**Role-Based Auth Guard**: Protect sensitive pages with role-based access control, enhancing app security.
-* ⚙️🔗**HTTP Interceptors**: Centralized handling of tokens and API interactions for a polished user experience.
-*💾🧮**Modular UI Components**: Maintain consistency with shared buttons, footers, and other reusable elements.
-*🚀📦 **Flexible Architecture**: Easily extend and customize features like food menus, user profiles, and order management.
+🔧🛠️ **Environment & Build Configuration**: Manage multiple environments with ease, ensuring efficient deployment and development flows.
+
+🔑🔒**Role-Based Auth Guard**: Protect sensitive pages with role-based access control, enhancing app security.
+
+⚙️🔗**HTTP Interceptors**: Centralized handling of tokens and API interactions for a polished user experience.
+
+💾🧮**Modular UI Components**: Maintain consistency with shared buttons, footers, and other reusable elements.
+
+🚀📦 **Flexible Architecture**: Easily extend and customize features like food menus, user profiles, and order management.
 
 ---
 
