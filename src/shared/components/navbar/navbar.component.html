@@ -1,7 +1,12 @@
-<section>
+<!-- <p-toast class="nav-toast" position="top-center" /> -->
+
+
+
+
+
+<section class=" hidden! lg:block!">
   <p-toolbar
-    class="mt-[60px]! hidden! py-4! rounded-none! justify-around! md:flex! md:fixed! border-transparent!  z-100! start-0! end-0!"
- 
+    class="mt-[60px]! py-4! rounded-none! justify-around! lg:flex! lg:fixed! border-transparent! z-100! start-0! end-0!"
   >
     <ng-template pTemplate="start">
       <a routerLink="/zomato" title="Preto" class="site-logo">
@@ -67,16 +72,16 @@
         "
         />
 
-          <p-button
-            label="Cart"
-            text
-            plain
-            [badge]="cartitemLength().length.toString() "
-            icon=" pi pi-cart-arrow-down"
-            size="large"
-            routerLink="/cart"
-            routerLinkActive="active   before:bg-[#ABA4C2] "
-            styleClass="!text-[#ABA4C2] uppercase!  overflow-visible!
+        <p-button
+          label="Cart"
+          text
+          plain
+          [badge]="cartitemLength().length.toString()"
+          icon=" pi pi-cart-arrow-down"
+          size="large"
+          routerLink="/cart"
+          routerLinkActive="active   before:bg-[#ABA4C2] "
+          styleClass="!text-[#ABA4C2] uppercase!  overflow-visible!
             before:w-0
             before:h-[3px]
             before:bg-[#ABA4C2]
@@ -87,8 +92,7 @@
             before:duration-1000
             hover:before:w-full
           "
-          />  
-        
+        />
 
         <p-button
           label="The Experience"
@@ -106,7 +110,6 @@
           before:transition-width
           before:duration-1000
           hover:before:w-full"
-         
         />
 
         <p-button
@@ -126,8 +129,6 @@
         before:duration-1000
         hover:before:w-full"
         />
-
-        
       </div>
     </ng-template>
 
@@ -141,13 +142,17 @@
       />
     </ng-template>
   </p-toolbar>
+
+  
 </section>
 
 
-<p-toolbar
-  class="mt-[60px]! md:hidden! rounded-none! border-transparent! flex   py-4 px-4 fixed top-0 start-0 end-0 z-100 bg-white "
->
-<ng-template pTemplate="start">
+
+<section class="lg:hidden! block">
+  <p-toolbar
+    class="mt-[60px]!  rounded-none! border-transparent! flex py-4 px-4 fixed top-0 start-0 end-0 z-100 bg-white"
+  >
+    <ng-template pTemplate="start">
       <a routerLink="/zomato" title="Preto" class="site-logo">
         <span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 514.1 172.4" width="100" height="50">
@@ -170,30 +175,63 @@
       </a>
     </ng-template>
 
-  <ng-template pTemplate="center">
-    <button (click)="showMobileMenu = true">
-      <i class="pi pi-bars text-3xl text-black text-[25px]! cursor-pointer "></i>
-    </button>
-  </ng-template>
-</p-toolbar>
+    <ng-template pTemplate="center">
+      <button   (click)="showMobileMenu = true">
+        <i class=" pi pi-bars text-3xl text-black text-[25px]! cursor-pointer ignore-click"></i>
+      </button>
+    </ng-template>
+  </p-toolbar>
 
-<p-drawer [(visible)]="showMobileMenu" >
+  <p-drawer [(visible)]="showMobileMenu" [blockScroll]="false" [closeOnEscape]="true">
     <ul class="space-y-10 p-4 text-lg font-semibold text-center">
-    <li routerLink="/ourfood" (click)="showMobileMenu = false"   class="text-[#AFBC72] uppercase cursor-pointer w-full text-[25px] relative menu-items" >Our Food</li>
-    <li routerLink="/categroies" (click)="showMobileMenu = false" class="text-[#EFC46B] uppercase cursor-pointer w-full text-[25px] relative menu-items">Categories</li>
-    <li routerLink="/cart" (click)="showMobileMenu = false" class="text-[#ABA4C2] uppercase ] cursor-pointer w-full text-[25px] relative menu-items">Cart</li>
-    <li routerLink="/experience" (click)="showMobileMenu = false" class="text-[#E36F62] uppercase cursor-pointer text-[25px] w-full  relative menu-items">The Experience</li>
-    <li routerLink="/group-booking" (click)="showMobileMenu = false"  class="text-[#EFC66F] uppercase cursor-pointer  w-full text-[25px] relative menu-items">Group Booking</li>
-    <li routerLink="/profile" (click)="showMobileMenu = false" class="text-[#07B5C1] uppercase w-full cursor-pointer text-[25px] relative menu-items">Your Profile</li>
-  </ul>
-</p-drawer>
+      <li
+        routerLink="/ourfood"
+            (click)="isToast()"
+        class="text-[#AFBC72] uppercase cursor-pointer w-full text-[25px] relative menu-items"
+      >
+        Our Food
+      </li>
+      <li
+        routerLink="/categroies"
+        (click)="isToast()"
+        class="text-[#EFC46B] uppercase cursor-pointer w-full text-[25px] relative menu-items"
+      >
+        Categories
+      </li>
+      <li
+        routerLink="/cart"
+           (click)="isToast()"
+        class="text-[#ABA4C2] uppercase ] cursor-pointer w-full text-[25px] relative menu-items"
+      >
+        Cart
+      </li>
+      <li
+        routerLink="/experience"
+            (click)="isToast()"
+        class="text-[#E36F62] uppercase cursor-pointer text-[25px] w-full relative menu-items"
+      >
+        The Experience
+      </li>
+      <li
+        routerLink="/group-booking"
+            (click)="isToast()"
+        class="text-[#EFC66F] uppercase cursor-pointer w-full text-[25px] relative menu-items"
+      >
+        Group Booking
+      </li>
+      <li
+        routerLink="/profile"
+           (click)="isToast()"
+        class="text-[#07B5C1] uppercase w-full cursor-pointer text-[25px] relative menu-items"
+      >
+        Your Profile
+      </li>
+    </ul>
+  </p-drawer>
+</section>
 
 
-<!-- <p-toast class="nav-toast" position="top-center" /> -->
-
-
-
- <p-drawer   [(visible)]="visible3" position="top" styleClass="drawer!">
+<p-drawer  [(visible)]="visible3" position="top" styleClass="drawer! z-index">
         <p>
            {{deatails()}}
         </p>

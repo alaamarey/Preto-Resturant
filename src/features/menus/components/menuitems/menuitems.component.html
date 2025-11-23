@@ -1,13 +1,12 @@
 <section id="categrioes" class="py-90 relative flex justify-center items-center">
   <div class="flex flex-col justify-center items-center relative z-20">
-    <h1 class="uppercase font-black  text-[55px] text-center md:text-start md:text-[65px] text-white relative">special categroies</h1>
+    <h1 class="uppercase font-black  text-[55px] text-center lg:text-start md:text-[65px] text-white relative">special categroies</h1>
     <p class="desc-img text-white text-[23px] text-center">
       Choose one of our restaurants to <br />
       find special Categroy!
     </p>
     <div class="card flex justify-center py-20 w-full">
       <p-treeselect
-
       [options]="nodes()"
         display="chip"
         [metaKeySelection]="false"
@@ -23,7 +22,7 @@
     </div>
   </div>
 
-  <div class=" hidden md:block absolute top-[60%] start-[10%] z-30">
+  <div class=" hidden lg:block absolute top-[60%] start-[10%] z-30">
     <figure class="bg-white w-[170px] h-[250px] -rotate-25 relative">
       <img
         src="/assets/s11.webp"
@@ -304,11 +303,11 @@
 
 
 
-  <div class="md:grid md:grid-cols-12 pt-20  ">
+  <div class="lg:grid lg:grid-cols-12 pt-20  ">
     @for (categroy of categroies() | search : selectedNode() ; track categroy.categoryId) { @if(
     categroy.photoUrl !== 'abc'){ @if( categroy.photoUrl.includes('https') && !(categroy.categoryId
     === 40) && !(categroy.categoryId === 41) ){
-    <div class="md:col-span-5 flex flex-col gap-y-20  px-2 md:px-0  ">
+    <div class="lg:col-span-5 flex flex-col gap-y-20  px-2 md:px-0  ">
 
       <div class="size-full h-[480px] bg-white relative ">
 

@@ -1,7 +1,7 @@
 <section>
   <app-slider [backgroundImages]="backgroundImages()"></app-slider>
-  <div class="container pt-20 md:pt-0">
-    <div class="md:grid  md:py-30 md:grid-cols-12 md:gap-2 md:items-center flex flex-col gap-y-5">
+  <div class="container pt-20 lg:pt-0">
+    <div class="lg:grid  lg:py-30 lg:grid-cols-12 lg:gap-2 lg:items-center flex flex-col gap-y-5">
       @for (item of categroyItems(); track item.itemID) { @if(!(item.itemID === 78)){ @if( !
       (item.photoUrl=== 'abc' )) {
 
@@ -29,7 +29,7 @@
           class="bg-[#07B5C1] cursor-pointer absolute z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 top-1/2 -translate-y-1/2 end-1/2 translate-x-1/2 w-[120%] flex justify-center items-center h-[300px]"
         >
           <p-card [header]="item.menuItemName" class="bg-white! rounded-none! size-[95%]!">
-            <p class="desc-img text-sm py-1">{{ item.description }}</p>
+            <p class="desc-img text-sm py-1 md:text-lg">{{ item.description }}</p>
             <small>{{ item.price | currency : 'GBP' }}</small>
             @if(item.availability === true){
             <p class="font-semibold">
@@ -75,7 +75,7 @@
     <app-button
       labelName="BACK TO CATEGROIES"
       bgColor="bg-[#E36F62]!"
-      classes="md:w-[40%]! my-5!   relative! start-[50%]! -translate-x-[50%]!  "
+      classes="lg:w-[40%]! my-5!  relative! start-[50%]! -translate-x-[50%]!  "
       routerLink="/categroies"
     ></app-button>
   </div>

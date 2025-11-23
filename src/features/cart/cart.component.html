@@ -262,15 +262,12 @@
     <p-progress-spinner ariaLabel="loading" />
   </div>
   } @else if( isCallApi() === false) {
-
-
-
-  <section class="pt-30">
-    <div class="md:grid md:grid-cols-12">
+  <section class="pt-30 ">
+    <div class="lg:grid lg:grid-cols-12 ">
       @for ( item of cartItems() ; track item.itemID) {
-      <div class="md:col-span-4 mb-5 md:mb-0">
-        <div class="mb-4 md:p-8 px- flex items-center justify-center">
-          <p-card [style]="{ width: '25rem', overflow: 'hidden' }" class="relative">
+      <div class="lg:col-span-4 md:mb-0 px-2 lg:px-0">
+        <div class="mb-4 lg:p-8  flex items-center justify-center">
+          <p-card [style]="{ overflow: 'hidden' }" class="relative">
             <ng-template #header>
               <img
                 [alt]="item.menuItemName"
@@ -374,23 +371,23 @@
   [(visible)]="visible"
   header="your order "
   [modal]="true"
-  [contentStyle]="{ width: '50rem', overflow: 'auto', 'padding-block': '5px' }"
+  [contentStyle]="{  overflow: 'auto', 'padding-block': '5px'}"
   [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
 
 >
-  <form class="flex  md:w-full  w-[50%] flex-col gap-y-2" [formGroup]="orderForm" (ngSubmit)="addOrder()">
+  <form class="flex  w-full    flex-col gap-y-2" [formGroup]="orderForm" (ngSubmit)="addOrder()">
     @let totlaAmount = orderForm.get('totalAmount') ;
     <div class="card flex items-center gap-x-4 w-full">
       <label for="totlaAmmount" class="font-bold me-2"> Order Ammount *</label>
       <p-inputnumber
         formControlName="totalAmount"
         inputId="totlaAmmount"
-        class="py-5! w-[15%]!"
+        class="py-5!"
         [showButtons]="true"
         buttonLayout="vertical"
         spinnerMode="vertical"
         inputId="vertical"
-        [inputStyle]="{ width: '3rem' }"
+        [inputStyle]="{ width: '5rem' }"
       >
         <ng-template #incrementbuttonicon>
           <span class="pi pi-plus "></span>
@@ -411,7 +408,7 @@
         rows="2"
         cols="70"
         pTextarea
-        class="rounded-none! w-[50%]"
+        class="rounded-none! "
       ></textarea>
     </div>
     <app-validator [control]="deliveryAddress!"></app-validator>

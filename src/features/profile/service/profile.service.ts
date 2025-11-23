@@ -29,6 +29,11 @@ export class ProfileService {
 
   signOut(){
     localStorage.removeItem('userId') ;
+    //  localStorage.setItem('toastMessage', JSON.stringify({
+    //     severity: 'warn',
+    //     summary: 'Warn',
+    //     detail: 'You must login to access this page! Look at The Bottom of the page to SignUp'
+    //   }));
     this.router.navigate(['zomato']);
   }
 

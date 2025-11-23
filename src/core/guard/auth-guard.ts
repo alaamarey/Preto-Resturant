@@ -7,7 +7,10 @@ export const authGuard: CanActivateFn = (route, state) => {
   console.log(route);
 
 
-  if (userId) return true;
+  if (userId) {
+    localStorage.removeItem('toastMessage')
+    return true;
+  } 
 
   else {
     if (state.url !== '/zomato') {

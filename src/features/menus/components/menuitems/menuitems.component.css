@@ -86,3 +86,13 @@ color :#fff
 ::ng-deep .p-tree  {
   background-color: transparent !important;
 }
+
+
+
+@media screen and ( min-width:768px) {
+
+  
+/* ::ng-deep .p-treeselect {
+width: 90% !important;
+} */
+}

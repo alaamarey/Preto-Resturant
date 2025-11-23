@@ -145,8 +145,8 @@ export class CartComponent implements OnInit {
   updateCartQuantity(itemId: number, quantity: number): void {
     this.cartService.updateCartQuantity({ customerId: this.customerId, itemId: itemId, quantity: quantity }).subscribe({
       next: (response => {
-        this.showConfirm();
         this.updatedMessag = response.message
+        this.showConfirm();
         console.log(response)
         console.log(quantity);
       })

@@ -14,57 +14,92 @@ import { ProfileService } from '../../../features/profile/service/profile.servic
 
 @Component({
   selector: 'app-navbar',
-  imports: [ToolbarModule, AvatarModule, SharedModule, ButtonModule, RouterLink, ToastModule, RouterLinkActive , DrawerModule],
+  imports: [ToolbarModule, AvatarModule, SharedModule, ButtonModule, RouterLink, ToastModule, RouterLinkActive, DrawerModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
-  providers:[MessageService]
+  providers: [MessageService]
 })
 export class NavbarComponent {
 
   private messageService = inject(MessageService);
   private cartService = inject(CartService);
-  private profileService = inject(ProfileService);
+  // private profileService = inject(ProfileService);
 
- cartitemLength = computed(  () => this.cartService.cartItems() ) ;
- showMobileMenu = false;
- visible3  = false ;
-deatails = signal('');
+  deatails = signal('');
+  visible3 = false;
 
-
-
-ngOnInit(): void {
-  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-  //Add 'implements OnInit' to the class.
+  cartitemLength = computed(() => this.cartService.cartItems());
+  showMobileMenu = false;
+  toastData = localStorage.getItem('toastMessage');
 
 
-  this.profileService.deleteuser().subscribe({
-    next:(respose => {
-        console.log(respose);
-        
-    } )
-  }) 
-  
-}
 
-  @HostListener('click' )
-  onClick() {
+
+  @HostListener('click', ['$event'])
+  onClick(event: Event) {
+
+    const target = event.target as HTMLButtonElement;
+
+
+    if (target.closest('.ignore-click')) {
+      if (!JSON.parse(localStorage.getItem('userId')!)) {
+        localStorage.setItem('toastMessage', JSON.stringify({
+          severity: 'warn',
+          summary: 'Warn',
+          detail: 'You must login to access this page! Look at The Bottom of the page to SignUp'
+        }));
+        const toastData = localStorage.getItem('toastMessage')!;
+        const msg = JSON.parse(toastData);
+        this.deatails.set(msg.detail);
+      }else{
+        this.deatails.set('');
+      }
+      console.log(target);
+      return;
+    }
+
+
+
+
+
     console.log(localStorage.getItem('toastMessage'));
-  const toastData = localStorage.getItem('toastMessage');
+    const toastData = localStorage.getItem('toastMessage');
     if (toastData) {
       const msg = JSON.parse(toastData);
-      // this.messageService.add({
-      //   severity: msg.severity,
-      //   summary: msg.summary,
-      //   detail: msg.detail
-      // });
+      this.messageService.add({
+        severity: msg.severity,
+        summary: msg.summary,
+        detail: msg.detail
+      });
+
 
       this.deatails.set(msg.detail);
-    
-      this.visible3 = true ;
-
-
-    
+      this.visible3 = true;
+      console.log(this.deatails());
       localStorage.removeItem('toastMessage'); // امسح الرسالة بعد عرضها
+      console.log('kakakakkak');
     }
   }
+
+
+
+
+
+
+
+
+  isToast() {
+    if (this.deatails()) {
+      this.visible3 = true;
+    }else{
+      this.visible3 = false;
+    }
+      this.showMobileMenu = false;
+      localStorage.removeItem('toastMessage')
+    }
 }
+
+
+
+
+

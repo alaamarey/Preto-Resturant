@@ -1,15 +1,13 @@
 import { Routes } from '@angular/router';
+import { authGuard } from '../core/guard/auth-guard';
 import { CartComponent } from '../features/cart/cart.component';
-import { CategroiesComponent } from '../features/categroies/categroies.component';
-import { NotfoundComponent } from '../features/notfound/notfound.component';
-import { OurfoodComponent } from '../features/ourfood/ourfood.component';
-import { ZomatoComponent } from '../features/zomato/zomato.component';
-import { MewnuitemdetailsComponent } from '../features/mewnuitemdetails/mewnuitemdetails.component';
-import { PizzaComponent } from '../features/ourfood/components/foodcategroy/components/pizza/pizza.component';
-import { ProfileComponent } from '../features/profile/profile.component';
 import { ExperienceComponent } from '../features/experience/experience.component';
 import { GroupingbookingComponent } from '../features/groupingbooking/groupingbooking.component';
-import { authGuard } from '../core/guard/auth-guard';
+import { MewnuitemdetailsComponent } from '../features/mewnuitemdetails/mewnuitemdetails.component';
+import { NotfoundComponent } from '../features/notfound/notfound.component';
+import { OurfoodComponent } from '../features/ourfood/ourfood.component';
+import { ProfileComponent } from '../features/profile/profile.component';
+import { ZomatoComponent } from '../features/zomato/zomato.component';
 
 export const routes: Routes = [
     {
@@ -21,12 +19,12 @@ export const routes: Routes = [
     },
 
     {
-        path: 'ourfood', component: OurfoodComponent, title: 'All-You-Can-Eat', 
-        canActivate:[authGuard],
+        path: 'ourfood', component: OurfoodComponent, title: 'All-You-Can-Eat',
+        canActivate: [authGuard],
         children: [
 
             {
-                path: '', redirectTo:'pizza', pathMatch:'full'
+                path: '', redirectTo: 'pizza', pathMatch: 'full'
 
             },
             {
@@ -53,28 +51,28 @@ export const routes: Routes = [
     },
 
     {
-        path: 'categroies', loadComponent: () => import('../features/menus/menus.component').then(c => c.MenusComponent), 
-        canActivate:[authGuard],
+        path: 'categroies', loadComponent: () => import('../features/menus/menus.component').then(c => c.MenusComponent),
+        canActivate: [authGuard],
         title: 'Find Your Menu'
     },
     {
-        path: 'categroiestemdetails/:categroyId',  component:MewnuitemdetailsComponent ,  canActivate:[authGuard],  title:'Preto Resturant'
+        path: 'categroiestemdetails/:categroyId', component: MewnuitemdetailsComponent, canActivate: [authGuard], title: 'Preto Resturant'
     },
-  
+
     {
-        path: 'cart', component: CartComponent, canActivate:[authGuard],title: 'Your Cart'
+        path: 'cart', component: CartComponent, canActivate: [authGuard], title: 'Your Cart'
     },
 
 
     {
-        path: 'experience', component: ExperienceComponent,  canActivate:[authGuard], title: 'Preto Experience'
+        path: 'experience', component: ExperienceComponent, canActivate: [authGuard], title: 'Preto Experience'
     },
     {
-        path: 'group-booking', component: GroupingbookingComponent , canActivate:[authGuard], title: 'Group Booking & Private Events'
+        path: 'group-booking', component: GroupingbookingComponent, canActivate: [authGuard], title: 'Group Booking & Private Events'
     },
 
     {
-        path: 'profile', component:ProfileComponent ,  canActivate:[authGuard],  title: 'Your profile'
+        path: 'profile', component: ProfileComponent, canActivate: [authGuard], title: 'Your profile'
     },
 
 
